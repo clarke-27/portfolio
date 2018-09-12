@@ -212,15 +212,15 @@ div.clip {
   float: left;
 }
 
-div.musicText {
+div.musicText h1, .musicText p{
   text-align: right;
 }
 
 .musicText {
-  -webkit-transform: translateY(-55vh);
-  -ms-transform: translateY(-55vh);
-  transform: translateY(-55vh);
-  width: 30vw;
+  -webkit-transform: translateY(-60vh);
+  -ms-transform: translateY(-60vh);
+  transform: translateY(-60vh);
+  width: 29vw;
   height: 50vh;
   padding: 20px;
   display: block;
