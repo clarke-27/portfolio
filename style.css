@@ -142,13 +142,13 @@ p {
   clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
 }
 
-.hero h1 {
+.frontTitle h1 {
   color: white;
   text-align: center;
   font-size: 60px;
 }
 
-.hero h3 {
+.frontTitle h3 {
   color: white;
   text-align: center;
   font-size: 20px;
@@ -536,6 +536,9 @@ div.imageAnim:hover {
   -webkit-filter: brightness(1) sepia(0.8) hue-rotate(deg);
   filter: brightness(1) sepia(0.8) hue-rotate(deg);
   z-index: 1;
+  background-size: cover;
+  width: 100vw;
+  height: 60vh;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
