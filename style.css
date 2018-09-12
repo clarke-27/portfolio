@@ -217,7 +217,7 @@ div.imagePS {
   height: 60vh;
   -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 50% 100%);
   clip-path: polygon(30% 0, 100% 0, 100% 100%, 50% 100%);
-  background-image: url('assets/images/clarke_PS.jpg');
+  background-image: url('assets/images/clarke_PS.JPG');
   background-size: cover;
   filter: brightness(40%);
   transition: 0.4s ease-in-out;
