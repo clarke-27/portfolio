@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $('#overlay').hide();
-  $('#openNav').click(function () {
+  $('.openNav').click(function () {
     $('#overlay').slideDown(600, 'swing');
   });
 
