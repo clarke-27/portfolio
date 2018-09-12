@@ -533,8 +533,6 @@ div.imageAnim:hover {
 }
 
 .musicHero, .psHero, .progHero {
-  -webkit-filter: brightness(1) sepia(0.8) hue-rotate(deg);
-  filter: brightness(1) sepia(0.8) hue-rotate(deg);
   z-index: 1;
   background-size: cover;
   width: 100vw;
