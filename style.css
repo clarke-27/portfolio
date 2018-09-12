@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Open Sans';
+  font-weight: 800;
+  color: rgb(156, 58, 203);
+}
+
+p {
+  font-family: 'Open Sans';
+  font-size: 14px;
+}
+
+.siteContainer {
+  overflow: hidden;
+  height: 295vh;
+}
+
+.nav {
+  position: fixed;
+  z-index: 1;
+}
+
+.frontpageNav img {
+  width: 64px;
+  float: left;
+  animation: rotate 4s cubic-bezier(.08,1.65,.92,-0.56) infinite;
+}
+
+.frontpageNav {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+}
+
+.frontpageNav .navH {
+  float: left;
+  padding-top: 10px;
+  display: none;
+}
+
+.frontpageNav:hover {
+  position: fixed;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 2s cubic-bezier(.08, 1.13, .67, -0.36);
+}
+
+.frontpageNav:hover .navH {
+  display: block;
+  -webkit-animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+#overlay ul {
+  position: relative;
+  margin-top: 40px;
+  float: left;
+  text-align: left;
+  left: 20vw;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-size: 30px;
+}
+
+#overlay ul li {
+  list-style: none;
+  padding: 10px;
+}
+
+#overlay ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#overlay ul li a:hover {
+  color: rgb(233, 65, 232);
+  filter: saturate(0.8);
+  border-top: 4px solid rgb(233, 65, 232);
+  transition: 0.2s ease-in-out;
+}
+
+#overlay #exit {
+  color: red;
+  position: absolute;
+  width: 64px;
+  margin: 20px;
+  padding: 10px;
+  font-size: 60px;
+}
+
+#overlay #exit img:hover {
+  cursor: pointer;
+  border-radius: 32px;
+  background-color: red;
+  transform: scale(1.05);
+  transition: 0.4s ease-in-out;
+}
+
+#overlay #exit img {
+  width: 64px;
+}
+
+.hero {
+  background: url('assets/images/home.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 60vh;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+
+.hero h1 {
+  color: white;
+  text-align: center;
+  font-size: 60px;
+}
+
+.hero h3 {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+.frontTitle {
+  position: relative;
+  top: 50%;
+  filter: none;
+  transform: translateY(-100%);
+}
+
+div.polyMusic {
+  width: 100vw;
+  height: 60vh;
+  margin-top: -18.1vh;
+  margin-bottom: -18.1vh;
+  -webkit-clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 80%);
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 80%);
+}
+
+div.imageMusic {
+  width: 70vw;
+  height: 60vh;
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+  clip-path: polygon(0 20%, 100% 0, 80% 100%, 0 80%);
+  background: url('assets/images/clarke_guitar1.png');
+  filter: brightness(50%);
+  background-size: cover;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+  transform: scale(1.01);
+  backface-visibility: hidden;
+}
+
+div.imageMusic:hover {
+  cursor: pointer;
+  filter: brightness(100%);
+  transition: 1s ease-in-out;
+}
+
+div.clip {
+  width: 70vw;
+  height: 60vh;
+  -webkit-shape-outside: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+  shape-outside: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+  shape-margin: 20px;
+  float: left;
+}
+
+div.musicText {
+  text-align: right;
+}
+
+.musicText {
+  transform: translateY(-55vh);
+  width: 30vw;
+  height: 50vh;
+  padding: 20px;
+  display: block;
+  font-family: 'Open Sans';
+  float: right;
+  overflow: hidden;
+}
+
+.music h1 {
+  font-size: 4vw;
+}
+
+div.polyPS {
+  width: 100vw;
+  clear: both;
+  height: 60vh;
+  transform: translateY(-72.1vh);
+  clip-path: polygon(0 0%, 100% 20%, 100% 100%, 0 100%);
+}
+
+div.imagePS {
+  width: 100vw;
+  height: 60vh;
+  -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 50% 100%);
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 50% 100%);
+  background-image: url('assets/images/clarke_PS.jpg');
+  background-size: cover;
+  filter: brightness(40%);
+  transition: 0.4s ease-in-out;
+}
+
+div.imagePS:hover {
+  cursor: pointer;
+  filter: brightness(100%);
+  transition: 1s ease-in-out;
+}
+
+.PSText h1 {
+  font-size: 4vw;
+}
+
+.PSText {
+  transform: translateY(-126vh);
+  clear: both;
+  float: left;
+  overflow: hidden;
+  padding-left: 20px;
+  height: 45vh;
+  text-align: left;
+  display: block;
+  width: 30vw;
+  font-family: 'Open Sans';
+}
+
+.polyCode {
+  width: 100vw;
+  height: 60vh;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+}
+
+.code {
+  transform: translateY(3.7vh);
+}
+
+.imageCode {
+  width: 100vw;
+  height: 100%;
+  clip-path: polygon(0 0, 65% 0%, 50% 100%, 0% 100%);
+  background-image: url('assets/images/code.png');
+  background-size: cover;
+  filter: brightness(70%);
+  transition: 0.4s ease-in-out;
+}
+
+.codeText {
+  float: right;
+  height: 40vh;
+  overflow: hidden;
+  padding-right: 20px;
+  text-align: right;
+  width: 35%;
+  transform: translateY(-75vh);
+}
+
+.codeText h1 {
+  font-size: 4vw;
+}
+
+.imageCode:hover {
+  cursor: pointer;
+  filter: brightness(100%);
+  transition: 1s ease-in-out;
+}
+
+div.polyAnim {
+  width: 100vw;
+  clear: both;
+  background-color: white;
+  height: 60vh;
+  transform: translateY(-83vh);
+  clip-path: polygon(0 0%, 100% 30%, 100% 100%, 0 100%);
+}
+
+div.imageAnim {
+  width: 70vw;
+  float: right;
+  height: 60vh;
+  -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 20% 100%);
+  clip-path: polygon(0% 0, 100% 0, 100% 100%, 20% 100%);
+  filter: brightness(40%);
+  background-size: cover;
+  transition: 0.4s ease-in-out;
+  transform: scale(1.01);
+  backface-visibility: hidden;
+}
+
+div.imageAnim:hover {
+  cursor: pointer;
+  filter: brightness(100%);
+  transition: 1s ease-in-out;
+}
+
+.animText h1 {
+  font-size: 4vw;
+}
+
+.animText {
+  transform: translateY(-133vh);
+  clear: both;
+  float: left;
+  overflow: hidden;
+  padding-left: 20px;
+  height: 40vh;
+  text-align: left;
+  display: block;
+  width: 30vw;
+  font-family: 'Open Sans';
+}
+
+.animation {
+  height: 40vh;
+  border-bottom: 2px solid black;
+  transform: translateY(7vh);
+}
+
+.photoshop {
+  margin-bottom: -76vh;
+}
+
+.about {
+  transform: translateY(4vh);
+  position: relative;
+  color: white;
+  width: 100vw;
+  height: 40vh;
+  background-color: black;
+  margin: 0 auto;
+}
+
+.about h1 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 25px;
+  padding: 10px;
+  width: 30vw;
+  border: 5px solid white;
+  border-radius: 20px;
+  transform: translateY(12vh);
+}
+
+.about h1:hover {
+  cursor: pointer;
+  background-color: white;
+  color: rgb(69, 203, 58);
+  transition: 0.4s ease-in-out;
+}
+
+.about a {
+  color: rgb(233, 65, 232);
+  text-decoration: none;
+}
+
+.about a:active {
+  color: rgb(233, 65, 232);
+  text-decoration: none;
+}
+
+.about video {
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -1;
+  overflow: hidden;
+  filter: opacity(0.16) sepia(90%) hue-rotate(-100deg);
+}
+
+.footer {
+  background-color: rgb(18, 18, 18);
+  transform: translateY(0vh);
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100vw;
+  height: 10vh;
+}
+
+.footer ul {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.footer li {
+  ;
+  height: 100%;
+  float: left;
+  display: inline-block;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+.footer a {
+  padding: 1vw;
+  margin: 0.2vw;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+.footer a:hover {
+  background-color: rgba(233, 65, 232,0.3);
+  border-right: 2px solid rgb(233, 65, 232);
+  transition: 0.4s ease-in-out;
+}
+
+.footer li:hover {
+  transform: scale(1.1);
+  transition: 0.4s ease-in-out;
+}
+
+.footer h3 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  float: right;
+  text-align: right;
+  color: white;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.musicHero {
+  filter: brightness(1) sepia(0.8) hue-rotate(deg);
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+.section1 {
+  position: relative;
+  z-index: 0;
+  width: 100vw;
+  height: 35vh;
+  margin-top: -12vh;
+  color: black;
+}
+
+.section1 .sect1Text {
+  padding-top: 5vh;
+  height: 30vh;
+  padding: 40px;
+  width: 50vw;
+  text-align: left;
+  overflow: hidden;
+}
+
+.section1 .sect1Text h1 {
+  font-size: 4vw !important;
+}
+
+.leftSection {
+  position: relative;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  width: 100vw;
+  height: 50vh;
+}
+.leftImage {
+  position: absolute;
+  height: 100%;
+  width: 50vw;
+  left:0;
+  float: left;
+
+}
+.section2 img {
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+}
+.leftImage img{
+  height: 100%;
+  float: right;
+  object-fit: cover;
+}
+
+.leftTextSection {
+  position: absolute;
+  padding: 30px;
+  width: 40vw;
+  float: right;
+  left:60%;
+  text-align: right;
+  height: 45vh;
+  overflow: hidden;
+}
+
+.leftTextSection h1 {
+  font-size: 4vw !important;
+}
+
+.rightSection {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+}
+
+.rightTextSection {
+  position: absolute;
+  float: left;
+  text-align: left;
+  width: 40vw;
+  height: 45vw;
+  overflow: hidden;
+  padding: 30px;
+}
+
+.rightImage {
+  position:relative;
+  width: 50vw;
+  height: 100%;
+  object-fit: cover;
+  float: right;
+}
+
+.rightImage img{
+  position: absolute;
+  width:100%;
+  float:right;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+}
+
+.rightTextSection h1 {
+  font-size: 4vw !important;
+}
+
+@media screen and (max-width:900px) {
+  .footer h3 {
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
