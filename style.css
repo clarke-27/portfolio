@@ -644,6 +644,20 @@ div.imageAnim:hover {
   font-size: 3.4vw !important;
 }
 
+.info  {
+  position: relative;
+  width: 100vw;
+  height: 65vh;
+  padding: 20px;
+}
+.infoP {
+  width: 50vw;
+  float:left;
+  text-align: left;
+}
+.info h2, .info h3, .info p {
+  color: black;
+}
 @media screen and (max-width:900px) {
   .footer h3 {
     display: none;
